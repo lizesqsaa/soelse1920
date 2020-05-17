@@ -1,0 +1,29 @@
+.cabecera {
+    display:flex;
+   }
+
+#soelse_letras_derecha {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#cabezera_pagina_principal{
+    margin-top: 10px;
+}
+
+.iniciar{
+    font-size: 18px;
+    margin-right: 0px;
+    text-align: center;
+    margin-top: 42px;
+}
+  html {
+      background-color: rgb(204, 204, 204);
+  }
+  
+  body{
+    background-color: white;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 5px;
+  }
