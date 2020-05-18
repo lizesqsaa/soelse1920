@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['login']))
-	Header("Location: iniciar_sesion.php");
+	Header("Location: login.php");
 else {
 	if (isset($_SESSION["carrito"])) {
 		$carrito = $_SESSION["carrito"];
@@ -29,9 +29,12 @@ else {
     </script>
 </head>
 <body>
-    <header class="cabecera">
-        <img src="imagenes/soelse_letras_derecha.png" alt="Logo de Soelse" id="soelse_letras_derecha">
-    </header>
+<?php
+	include_once("cabecera.php");
+	include_once("menu.php");
+?>
+
+<main>
 
     <div id="caja_productos">
         <div class="div_productos">
@@ -92,7 +95,7 @@ else {
             </div>
         </div>
     </div>
-
+</main>
 
     <footer>
         <p id="formas_de_pago">Formas de pago:</p>
@@ -105,6 +108,13 @@ else {
         <p id="dir">POL. INDUSTRIAL CR.AMARILLA (PICA)) 3 – 41007 en Sevilla. ESPAÑA</p>
         <hr size="1px" color="black"/>
     </footer>
-<br>
+
+
+
+<?php
+include_once("pie.php");
+
+?>
+
 </body>
 </html>

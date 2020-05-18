@@ -1,0 +1,115 @@
+.cabecera {
+    display:flex;
+   }
+
+#soelse_letras_derecha {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#cabecera_pagina_principal{
+    margin-top: 10px;
+}
+
+.iniciar{
+    font-size: 18px;
+    margin-right: 0px;
+    text-align: center;
+    margin-top: 42px;
+}
+html {
+      background-color: rgb(204, 204, 204);
+}
+  
+body{
+    background-color: white;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 5px;
+}
+
+#menu{
+    background-color: rgba(78, 76, 76, 0.788);
+}
+#menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#menu ul li{
+    display: inline-block;
+}
+#menu ul li a{
+    color:white;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+#menu ul li a:hover{
+    background-color: cornflowerblue;
+}
+.item-r{
+    float: right;
+}
+
+/*==========================*/
+/*=====Texto e imagen 1=====*/
+/*==========================*/
+.c1 {
+    display: flex;
+}
+
+#t1 {
+    float: right;
+    margin-top: 2.5%;
+    margin-right: 2.5%;
+    margin-bottom: 0%;
+    font-size: large;
+    text-align: justify;
+    border-radius: 5px;
+    box-shadow: 1% 1% 1% 1% rgb(0, 0, 0);
+    padding: 0.5%;
+    background-color: rgba(2, 159, 250, 0.438);
+}
+
+#f1 {
+    margin-top: 2.5%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    width: 100%;
+    height: 100%;
+    box-shadow: 5px 5px 25px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(2, 159, 250, 0.438);
+}
+/*==========================*/
+/*==========================*/
+/*==========================*/
+
+
+
+/*==========================*/
+/*=====Texto e imagen 2=====*/
+/*==========================*/
+.textoYlista2 {
+    float: left;
+    margin-left: 2.5%;
+    font-size: large;
+    text-align: justify;
+    display: block;
+}
+#i2 {
+    display:flex;
+}
+
+#f2 {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: 1%;
+    width: 30%;
+    float: right;
+
+}
+
+#c2 {
+    display: flex;
+}
