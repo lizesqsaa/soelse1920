@@ -3,7 +3,12 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>Acerca de nosotros</title>
+
+  <link rel="stylesheet" type="text/css" href="css/cabecera.css"/>
+ <link rel="stylesheet" type="text/css" href="css/menu.css"/>
+ <link rel="stylesheet" type="text/css" href="css/pie.css"/>
 </head>
 
 <body>

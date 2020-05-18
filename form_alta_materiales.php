@@ -1,5 +1,11 @@
 
-
+ <?php
+    
+    include_once("cabecera.php");
+   
+   ?>
+   
+     
 <!DOCTYPE html>
 <html lang = "es">
     <head>

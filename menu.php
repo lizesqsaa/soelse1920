@@ -1,28 +1,32 @@
 <nav class="menu">
 		<ul>
 			<li>
-				<a href="home.php"> Home </a>
-            </li>
-			<li>
-				<a href="">Productos</a>
-			</li>
-			<li>
-				<a href=".php">Materiales</a>
+				<a href="home.php"> home </a>
             </li>
             <li>
-				<a href=".php">Proveedores</a>
+				<a href="empleados.php"> empleados </a>
+            </li>
+
+			<li>
+				<a href="">productos</a>
 			</li>
 			<li>
-				<a href="carrito.php">Carrito</a>
-			</li>
-			<li>
-				<a href="about.php">Acerca de nosotros </a>
+				<a href="consulta_materiales.php">materiales</a>
             </li>
             <li>
-				<a href="login.php">Iniciar Sesion </a>
+				<a href="consulta_proveedores.php">proveedores</a>
 			</li>
 			<li>
-				<a href="logout.php">Cerrar Sesion</a>
+				<a href="carrito.php">carrito</a>
+			</li>
+			<li>
+				<a href="about.php">acerca de nosotros </a>
+            </li>
+            <li>
+				<a href="login.php"> acceder </a>
+			</li>
+			<li>
+				<a href="logout.php">cerrar sesion</a>
 			</li>
 		</ul>
 </nav>
