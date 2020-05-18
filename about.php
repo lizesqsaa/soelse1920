@@ -18,14 +18,15 @@
 	include_once("/menu.php");
 ?>
 <main>
-  
+     <h1 id="titulo1">¡Bienvenido a Soelse! </h1>
 
 </main>
 
+<?php	
+  include_once("/pie.php");
+  
+?>
+
 		
 </body>
-
-<?php	
-	include_once("/pie.php");
-?>
 </html>
