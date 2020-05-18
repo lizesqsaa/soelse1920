@@ -54,7 +54,7 @@
         </form>
  <?php
     
- include_once("../../vista/pie.php");
+ include_once("pie.php");
 
 ?>
 
