@@ -1,5 +1,11 @@
 
-
+ <?php
+    
+    include_once("cabecera.php");
+   
+   ?>
+   
+     
 <!DOCTYPE html>
 <html lang = "es">
     <head>
@@ -54,7 +60,7 @@
         </form>
  <?php
     
- include_once("../../vista/pie.php");
+ include_once("pie.php");
 
 ?>
 

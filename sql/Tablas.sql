@@ -27,11 +27,11 @@ END;
 
 CREATE TABLE EMPLEADOS(
     OID_EMPLEADO SMALLINT,
+    OID_GERENTE SMALLINT not null,
     nombreEmpleado VARCHAR(20) not null unique,
     cargo VARCHAR(25) not null,
     division VARCHAR(25) not null,
     tipoPenalizacionEmpleado varchar(9), check(tipoPenalizacionEmpleado in('MONETARIA','DESPIDO')),
-    OID_GERENTE SMALLINT not null,
     fecha_inicio CHAR(5) not null,CHECK (REGEXP_LIKE(fecha_inicio, '[0-2][0-9][:][0-5][0-9]')),
     fecha_fin CHAR(5) not null,CHECK (REGEXP_LIKE(fecha_inicio, '[0-2][0-9][:][0-5][0-9]')),
     dia_de_la_semana VARCHAR(20), CHECK(dia_de_la_semana IN('LUNES','MARTES', 'MIERCOLES', 'JUEVES', 'VIERNES', 'SABADO')),
@@ -57,11 +57,11 @@ END;
 
 CREATE TABLE PEDIDOMATERIALES(
     OID_PEDIDO_MAT SMALLINT PRIMARY KEY,
+    OID_GERENTE SMALLINT NOT NULL,
     tipo_Penalizacion varchar(11), CHECK (tipo_Penalizacion in ('RETRASO','DETERIORADO')),
     fecha_Limite date not null,check(fecha_Limite > TO_DATE('2020-01-12','YYYY-MM-DD')),
     descuento char(2) not null, CHECK (descuento in ('NO','SI')),
     posicion_Cola integer unique,check(posicion_Cola>=0),
-    OID_GERENTE SMALLINT NOT NULL,
     FOREIGN KEY(OID_GERENTE) REFERENCES GERENTE
     );
     
@@ -108,10 +108,10 @@ END;
 
 CREATE TABLE MATERIALES(
     OID_MATERIAL SMALLINT,
+    OID_PROVEEDOR SMALLINT not null,
     nombre_material VARCHAR(20) not null unique, 
     stock integer not null, check(stock>=0),
     precio_total integer not null,check(precio_total>=0),
-    OID_PROVEEDOR SMALLINT not null ,
     primary key(OID_MATERIAL),
     foreign key(OID_PROVEEDOR) references PROVEEDORES
     );
@@ -134,10 +134,10 @@ END;
 
 CREATE TABLE LINEAPEDIDOMATERIALES(
     OID_LPM SMALLINT,
-    cantidad integer not null,check(cantidad>0),
-    precio_pedido integer not null,check(precio_pedido>0),
     OID_PEDIDO_MAT SMALLINT not null,
     OID_MATERIAL SMALLINT not null,
+    cantidad integer not null,check(cantidad>0),
+    precio_pedido integer not null,check(precio_pedido>0),
     primary key(OID_LPM),
     foreign key(OID_PEDIDO_MAT) references PEDIDOMATERIALES,
     foreign key(OID_MATERIAL) references MATERIALES
@@ -165,7 +165,7 @@ CREATE TABLE PRODUCTOS (
     categoria varchar(25) not null unique,
     precio integer NOT NULL,
     descripcion long not null,
-    imagen varchar(255) not null unique,
+    imagen varchar(500) not null unique,
     tiempo_estimado_dias integer not null
 );
 
@@ -242,9 +242,9 @@ END;
 
 CREATE TABLE TIENE_PEDIDOS (
     OID_TIENE_PEDIDOS SMALLINT PRIMARY KEY,
-    numero integer not null,
     OID_PRODUCTO SMALLINT not null,
     OID_PEDIDO SMALLINT not null,
+    numero integer not null,
     
     CONSTRAINT AK_PRODUCTO_PEDIDO UNIQUE (OID_PRODUCTO),
     CONSTRAINT AK_PEDIDO UNIQUE (OID_PEDIDO)
@@ -269,10 +269,10 @@ END;
 
 CREATE TABLE USUARIOS(
     OID_USUARIO SMALLINT PRIMARY KEY,
-    nickname VARCHAR(25) NOT NULL UNIQUE,
-    contrasena VARCHAR(50) NOT NULL,
     OID_CLIENTE SMALLINT UNIQUE,
     OID_GERENTE SMALLINT UNIQUE,
+    nickname VARCHAR(25) NOT NULL UNIQUE,
+    contrasena VARCHAR(50) NOT NULL,
     FOREIGN KEY(OID_GERENTE) REFERENCES GERENTE,
     FOREIGN KEY(OID_CLIENTE) REFERENCES CLIENTES
 );
@@ -295,6 +295,7 @@ END;
 
 CREATE TABLE CARRITOS (
     OID_CARRITO SMALLINT PRIMARY KEY,
+    OID_CLIENTE SMALLINT NOT NULL UNIQUE,
     ID_PEDIDO_1 SMALLINT,
     ID_PEDIDO_2 SMALLINT,
     ID_PEDIDO_3 SMALLINT,
@@ -305,7 +306,6 @@ CREATE TABLE CARRITOS (
     ID_PEDIDO_8 SMALLINT,
     ID_PEDIDO_9 SMALLINT,
     ID_PEDIDO_10 SMALLINT,
-    OID_CLIENTE SMALLINT NOT NULL UNIQUE,
     FOREIGN KEY(OID_CLIENTE) REFERENCES CLIENTES
 );
 
