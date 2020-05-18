@@ -1,6 +1,4 @@
+<header class="cabecera">
 
-    <header>
-         
-            <img src="images/headerlogo.png" alt= "cabecera" >
-      
-    </header>
+    <img src="images/headerlogo.png" alt="Logo de Soelse" id="soelse_letras_derecha">
+</header>

@@ -6,7 +6,10 @@ require_once ("gestionarMateriales.php");
 
 
 if (!isset($_SESSION['login']))
-	Header("Location: login.php");
-else {
-
+    Header("Location: login.php");
     
+    else {
+        if (isset($_SESSION["materiales"])) {
+            $productos = $_SESSION["materiales"];
+            unset($_SESSION["materiales"]);
+        }
