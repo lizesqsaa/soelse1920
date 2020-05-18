@@ -9,6 +9,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
  <link rel="stylesheet" type="text/css" href="css/cabecera.css"/>
+ <link rel="stylesheet" type="text/css" href="css/login.css"/>
  <link rel="stylesheet" type="text/css" href="css/menu.css"/>
  <link rel="stylesheet" type="text/css" href="css/pie.css"/>
 
